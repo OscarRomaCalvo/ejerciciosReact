@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Cabecera from './components/Cabecera/Cabecera'
+import Tarjeta from './components/Tarjeta/Tarjeta'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Cabecera></Cabecera>
+      <Tarjeta></Tarjeta>       
     </>
   )
 }

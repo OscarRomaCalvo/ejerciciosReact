@@ -1,16 +1,21 @@
 header {
     background-color: #333;
     color: #fff;
-    position: fixed; /* Fija la posición del encabezado */
-    top: 0; /* Coloca el encabezado en la parte superior de la página */
+    position: fixed; 
+    top: 0; 
     left: 0;
-    width: 100%; /* Ancho del encabezado al 100% del viewport */
+    width: 100%; 
+    height: 70px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+
 }
 
 img{
-    margin:10px;
+    margin: 20px;
 }
 
 .Logo{
-    float: left;
+    vertical-align: middle;
 }

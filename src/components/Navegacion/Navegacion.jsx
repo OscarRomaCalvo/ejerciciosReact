@@ -14,9 +14,9 @@ function Navegacion(){
     return(
         <>
             <nav>
-              <ul>
-                {RenderListItems(enlaces)}
-            </ul> 
+                <ul>
+                    {RenderListItems(enlaces)}
+                </ul> 
             </nav>
         </>
     )
