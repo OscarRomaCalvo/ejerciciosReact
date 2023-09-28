@@ -1,0 +1,11 @@
+button{
+    margin:5px;
+}
+
+.primary{
+    background-color: red;
+}
+
+.secondary{
+    background-color: blue;
+}
