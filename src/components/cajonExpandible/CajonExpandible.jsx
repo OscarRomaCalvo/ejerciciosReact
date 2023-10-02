@@ -1,17 +1,18 @@
 import './index.css'
 import { useState } from 'react';
 
-function CajonExpandible({children}){
+function CajonExpandible({children, titulo}){
     const [ampliado, setAmpliado] = useState(false)
 
-    const changeAmpliado = () => {
-        setAmpliado(!ampliado)
+    const handleClick = () => {
+        setAmpliado(ampliado => !ampliado)
     }
 
     return (
         <div className="cajaContenedora">
+            <h4 className='titulo'>{titulo}</h4>
             {ampliado ? children: null}
-            <button onClick={changeAmpliado} >{ampliado ? ("Cerrar"): "Ampliar"}</button> 
+            <button onClick={handleClick} >{ampliado ? ("Cerrar"): "Ampliar"}</button> 
         </div>
     )
 }

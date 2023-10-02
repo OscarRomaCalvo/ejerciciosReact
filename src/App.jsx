@@ -8,12 +8,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <CajonExpandible>
-        <p>Este es un ejemplo del hijo que se le pasaría</p>
-        <img src="https://picsum.photos/200" ></img>
-      </CajonExpandible>
-    </>
+    <CajonExpandible titulo="Título">
+      <p>Este es un ejemplo del hijo que se le pasaría</p>
+      <img src="https://picsum.photos/200" ></img>
+    </CajonExpandible>
   )
 }
 
