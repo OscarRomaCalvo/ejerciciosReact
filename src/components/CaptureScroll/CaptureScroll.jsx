@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./index.css"
+import BotonUp from "../BotonUp/BotonUp";
 
 function CaptureScroll(){
     const [position, setPosition] = useState(0);
@@ -35,6 +36,7 @@ function CaptureScroll(){
                 Quos exercitationem voluptates ex, eaque, incidunt quo reiciendis, vel fugiat dolorum iure dolore similique at. Nobis, doloremque eos! Eos, facere et consequatur repudiandae quaerat ratione dicta voluptas similique nesciunt eligendi.
             </div>
             <p className="marcador"> {position} </p>
+            <BotonUp></BotonUp>
         </>
     )
 }

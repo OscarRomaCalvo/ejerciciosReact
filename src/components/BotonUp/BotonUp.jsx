@@ -7,7 +7,11 @@ function BotonUp(){
           top: 0,
           behavior: 'smooth',
         });*/
-        
+        const fullPageElement = document.querySelector('.fullPage');
+        fullPageElement.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
       };
 
       return (

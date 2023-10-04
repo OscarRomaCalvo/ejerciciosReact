@@ -11,7 +11,6 @@ function App() {
   return (
     <div>
       <CaptureScroll></CaptureScroll>
-      <BotonUp></BotonUp>
     </div>
   )
 }
