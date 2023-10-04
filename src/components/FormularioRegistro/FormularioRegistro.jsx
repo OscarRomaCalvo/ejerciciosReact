@@ -36,6 +36,7 @@ const FormularioRegistro = () => {
         <div>
           <p>Nombre de usuario:</p>
           <input
+            minLength={3}
             type="text"
             name="username"
             value={formData.username}
