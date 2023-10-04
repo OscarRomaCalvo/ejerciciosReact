@@ -1,0 +1,12 @@
+.fullPage{
+    width: 200px;
+    height: 60vh;
+    overflow-y: scroll;
+    margin: 80px;
+  }
+
+.marcador{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
