@@ -1,14 +1,12 @@
 import './index.css'
+import { useContext } from "react"
+import { ProductContext } from "../../context/ProductsContext"
 
-function ProductCard({producto, index, setListaProductos, listaProductos}){
+function ProductCard({producto, index}){
     const {nombre, imagen, precio, stock} = producto
     
-    function addToCart(){
-        let nuevaLista = [...listaProductos]
-        nuevaLista[index].stock--
-        setListaProductos(nuevaLista)
-        //TODO añadir al carrito
-    }
+    const {addToCart} = useContext(ProductContext)
+
 
     return (
         <div className={`card ${((stock>0) ? "hay" : "noHay")}`}>
@@ -18,7 +16,7 @@ function ProductCard({producto, index, setListaProductos, listaProductos}){
             <p>
                 {((stock>0) ? stock : "Sin stock")}
             </p>
-            <button onClick={addToCart}>Comprar</button>
+            <button onClick={() => addToCart(index)}>Comprar</button>
         </div>
     )
 }
