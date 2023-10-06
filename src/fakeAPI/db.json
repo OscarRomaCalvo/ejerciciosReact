@@ -1,0 +1,23 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "author": "jhon doe",
+        "title": "some-title"
+      },
+      {
+        "id": 2,
+        "author": "foo bar",
+        "title": "another-title"
+      },
+      {
+        "id": 3,
+        "author": "jhon wicks dog",
+        "title": "is-this-a-title"
+      }
+    ],
+    "comments": [],
+    "profile": {
+      "name": "someone somewhere"
+    }
+  }
