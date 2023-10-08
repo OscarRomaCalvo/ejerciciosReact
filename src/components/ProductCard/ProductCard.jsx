@@ -14,6 +14,7 @@ function ProductCard({producto, index}){
         reducirStock(index)
         addToCart(nombreProducto, precio, cantidad)
     }
+    
     const cantidad=1
     return (
         <div className={`card ${((stock>0) ? "hay" : "noHay")}`}>
@@ -23,7 +24,7 @@ function ProductCard({producto, index}){
             <p>
                 {((stock>0) ? stock : "Sin stock")}
             </p>
-            <button onClick={() => comprar(index, nombre, precio, cantidad)}>Comprar</button>
+            <button onClick={() => comprar(index, nombre, precio, cantidad) } disabled={!(stock>0)}>Comprar</button>
         </div>
     )
 }

@@ -2,7 +2,9 @@ import { createContext, useState } from "react"
 
 const CartContext = createContext({ 
   listaCart: [],
-  addToCart: () => {} 
+  addToCart: () => {},
+  reducirCompra: () => {},
+  borrarElementoCarrito: () => {}
 })
 
 export { CartContext }
@@ -30,10 +32,26 @@ function CartContextProvider({ children }) {
     setListaCart(nuevaLista)
   }
 
+  const borrarElementoCarrito = (producto) => {
+    setListaCart((list)=>{
+      const nuevaLista= list.filter((item)=>item.Producto!==producto.Producto)
+      return nuevaLista
+    })
+  }
+
+  const reducirCompra = (producto) => {
+    let nuevaLista = [...listaCart]
+    const indiceProducto = nuevaLista.findIndex((item)=>item.Producto===producto.Producto)
+    nuevaLista[indiceProducto].Cantidad--
+    nuevaLista[indiceProducto].PrecioTotal-=nuevaLista[indiceProducto].PrecioPorUnidad
+    setListaCart(nuevaLista)
+  }
 
   const contextValue = { 
     listaCart : listaCart, 
-    addToCart: addToCart
+    addToCart: addToCart,
+    reducirCompra: reducirCompra,
+    borrarElementoCarrito: borrarElementoCarrito,
   }
 
   return (

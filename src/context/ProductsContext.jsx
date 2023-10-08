@@ -2,7 +2,8 @@ import { createContext, useState } from "react"
 
 const ProductContext = createContext({ 
   listaProductos: [],
-  reducirStock: () => {} 
+  reducirStock: () => {} ,
+  aumentarStock: () => {}
 })
 
 export { ProductContext }
@@ -48,10 +49,20 @@ function ProductContextProvider({ children }) {
     setListaProductos(nuevaLista)
   }
 
+  const aumentarStock = (nombreProducto, cantidad) => {
+    let nuevaLista = [...listaProductos]
+    const indiceProducto = nuevaLista.findIndex((item)=>item.nombre===nombreProducto) 
+    nuevaLista[indiceProducto].stock+=cantidad
+    
+    setListaProductos(nuevaLista)
+  }
+
   const contextValue = { 
     listaProductos: listaProductos, 
-    reducirStock: reducirStock
+    reducirStock: reducirStock,
+    aumentarStock: aumentarStock
   }
+
 
   return (
     <ProductContext.Provider value={contextValue}>
