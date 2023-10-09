@@ -14,7 +14,7 @@ function ProductContextProvider({ children }) {
     {   
         nombre: "Manzana",
         imagen: "https://www.recetasnestle.com.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg",
-        precio: 0.30,
+        precio: 0.2,
         stock: 120
     },
     {
